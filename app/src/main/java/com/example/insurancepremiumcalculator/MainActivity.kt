@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -75,13 +76,15 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 else->300
             }
         }
+        val symbol=Currency.getInstance(Locale.getDefault()).symbol
         var total=premium+genderExtra+smokeExtra
-        textViewPremium.setText(R.string.insurance_premium + R.string.rm + total)
+        textViewPremium.text=String.format("%s %d",symbol,total)
     }
     fun reset(view: View) {
         spinnerAge.setSelection(0)
         radioGroupGender.clearCheck()
         checkBoxSmoker.isChecked=false
+        textViewPremium.setText(R.string.insurance_premium)
     }
 
 }

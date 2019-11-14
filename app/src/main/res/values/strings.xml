@@ -8,7 +8,6 @@
     <string name="calculate">Calculate</string>
     <string name="reset">Reset</string>
     <string name="insurance_premium">Insurance Premium :</string>
-    <string name="rm">RM </string>
     <string name="yes">Yes</string>
     <string-array name="age_groups">
         <item>Less than 17</item>
